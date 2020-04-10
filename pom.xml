@@ -26,7 +26,7 @@
                     <plugin>
                         <groupId>com.akathist.maven.plugins.launch4j</groupId>
                         <artifactId>launch4j-maven-plugin</artifactId>
-                        <version>1.5.1</version>
+                        <version>1.7.22</version>
                         <executions>
                             <execution>
                                 <id>l4j-clui</id>
@@ -44,7 +44,7 @@
                                         <preCp>anything</preCp>
                                     </classPath>
                                     <jre>
-                                        <minVersion>1.6.0</minVersion>
+                                        <minVersion>1.8.0</minVersion>
                                         <jdkPreference>preferJre</jdkPreference>
                                     </jre>
                                     <versionInfo>
@@ -55,7 +55,7 @@
                                         <productVersion>1.0.0.0</productVersion>
                                         <txtProductVersion>1.0.0.0</txtProductVersion>
                                         <productName>App</productName>
-                                        <companyName>Lukasz Lenart</companyName>
+                                        <companyName>Dmytro Prokopenko</companyName>
                                         <internalName>app</internalName>
                                         <originalFilename>app.exe</originalFilename>
                                     </versionInfo>
