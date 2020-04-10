@@ -23,7 +23,7 @@ build: install ## Compile & Build all artifacts
 
 .PHONY: run
 run: ## Run app
-	java -cp target/classes zorkyy.demo.gui.App
+	java -cp target/classes zorkyy.demo.main.App
 
 .PHONY: clean
 clean: ## Clean all dependencies & artifacts
