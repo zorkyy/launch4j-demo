@@ -42,7 +42,7 @@
                                     <outfile>${project.build.directory}/app.exe</outfile>
                                     <downloadUrl>http://java.com/download</downloadUrl>
                                     <classPath>
-                                        <mainClass>zorkyy.demo.gui.App</mainClass>
+                                        <mainClass>zorkyy.demo.main.App</mainClass>
                                         <preCp>anything</preCp>
                                     </classPath>
                                     <jre>
@@ -71,7 +71,7 @@
                         <artifactId>osxappbundle-maven-plugin</artifactId>
                         <version>1.0.1</version>
                         <configuration>
-                            <mainClass>zorkyy.demo.gui.App</mainClass>
+                            <mainClass>zorkyy.demo.main.App</mainClass>
                             <diskImageFile>${project.build.directory}/app.dmg</diskImageFile>
                             <zipFile>${project.build.directory}/app.dmg.zip</zipFile>
                             <bundleName>Demo App</bundleName>
