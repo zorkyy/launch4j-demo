@@ -1,4 +1,4 @@
-package pl.org.lenart.launch4j;
+package zorkyy.demo.gui;
 
 import javax.swing.*;
 import java.awt.*;
