@@ -21,6 +21,10 @@ install: compile ## Install dependencies
 build: install ## Compile & Build all artifacts
 	mvn package
 
+.PHONY: run
+run: ## Run app
+	java -cp target/classes zorkyy.demo.gui.App
+
 .PHONY: clean
 clean: ## Clean all dependencies & artifacts
 	mvn clean
