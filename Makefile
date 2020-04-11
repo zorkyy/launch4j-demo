@@ -23,7 +23,7 @@ build-maven: install
 
 .PHONY: build
 build: build-maven ## Compile & Build all artifacts
-	cat linux-stub.sh target/launch4j-demo-1.0-SNAPSHOT.jar > target/app.run && chmod +x target/app.run
+	cat linux-stub.sh target/app-1.0-SNAPSHOT.jar > target/app.run && chmod +x target/app.run
 
 .PHONY: run
 run: ## Run app
