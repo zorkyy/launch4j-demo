@@ -17,9 +17,13 @@ compile: ## Compile java classes
 install: compile ## Install dependencies
 	mvn install
 
-.PHONY: build
-build: install ## Compile & Build all artifacts
+.PHONY: build-maven
+build-maven: install
 	mvn package
+
+.PHONY: build
+build: build-maven ## Compile & Build all artifacts
+	cat linux-stub.sh target/launch4j-demo-1.0-SNAPSHOT.jar > target/app.run && chmod +x target/app.run
 
 .PHONY: run
 run: ## Run app
