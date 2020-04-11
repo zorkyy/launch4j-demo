@@ -30,7 +30,7 @@ run: ## Run app
 	java -cp target/classes zorkyy.demo.main.App
 
 .PHONY: test
-test: ## Test app
+test: compile ## Test app
 	mvn test
 
 .PHONY: clean
