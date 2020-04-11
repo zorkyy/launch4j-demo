@@ -16,7 +16,7 @@
   <manifest></manifest>
   <icon></icon>
   <classPath>
-    <mainClass>tk.unnikked.wireworld.Main</mainClass>
+    <mainClass>zorkyy.demo.main.App</mainClass>
   </classPath>
   <jre>
     <path></path>
