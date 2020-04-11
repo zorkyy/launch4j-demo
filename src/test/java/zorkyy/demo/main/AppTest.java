@@ -1,4 +1,4 @@
-package pl.org.lenart.launch4j;
+package zorkyy.demo.main;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
