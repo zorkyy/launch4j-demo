@@ -1,22 +1,21 @@
 package zorkyy.demo.main;
 
-import javax.swing.*;
-import java.awt.*;
+import java.util.Scanner;
 
-public class App extends JFrame {
+public class App{
 
-    public static void main(String[] args) {
-        App app = new App();
-        app.sayHello();
-    }
+    public static void main(String[] args) throws InterruptedException {
+        System.out.println("Hello World!");
 
-    public App() throws HeadlessException {
-        setVisible(false);
-    }
+        Scanner scanner = new Scanner(System.in);
+        String result = scanner.nextLine();
 
-    private void sayHello() {
-        JOptionPane.showMessageDialog(this, "Hello world!", "Hello", JOptionPane.INFORMATION_MESSAGE);
-        dispose();
+        System.out.println("Echo: " + result + "!");
+        System.out.println("Sleeping...");
+
+        Thread.sleep(2000);
+
+        System.exit(0);
     }
 
 }
