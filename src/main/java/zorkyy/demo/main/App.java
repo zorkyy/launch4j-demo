@@ -1,4 +1,4 @@
-package zorkyy.demo.gui;
+package zorkyy.demo.main;
 
 import javax.swing.*;
 import java.awt.*;
