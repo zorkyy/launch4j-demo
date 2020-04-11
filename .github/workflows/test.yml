@@ -1,0 +1,34 @@
+name: Test, Publish
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Checkout
+        run: |
+          REPO_NAME=${GITHUB_REPOSITORY##*/};
+          if [[ ${GITHUB_REF} == refs/heads/* ]]
+          then
+            ACTION_REF=${GITHUB_REF:11}
+          elif [[ ${GITHUB_REF} == refs/tags/* ]]
+          then
+            ACTION_REF=${GITHUB_REF:10}
+          fi
+          echo "::set-env name=REPO_NAME::${REPO_NAME}"
+          echo "::set-env name=TEST_IMAGE_TAG::airslate/${REPO_NAME}:${ACTION_REF//\//_}_${GITHUB_SHA}"
+      # Compile
+      - name: Compile
+        run: |
+          make compile
+      # Tests
+      - name: Test PHPUnit
+        run: |
+          make test
+#      - name: Upload math result shared workspace
+#        uses: actions/upload-artifact@v1
+#        with:
+#          name: workspace
+#          path: coverage-report
