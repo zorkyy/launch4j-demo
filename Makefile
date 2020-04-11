@@ -29,6 +29,10 @@ build: build-maven ## Compile & Build all artifacts
 run: ## Run app
 	java -cp target/classes zorkyy.demo.main.App
 
+.PHONY: test
+test: compile ## Test app
+	mvn test
+
 .PHONY: clean
 clean: ## Clean all dependencies & artifacts
 	mvn clean
