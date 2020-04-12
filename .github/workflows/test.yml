@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
       # Setup SDK
@@ -19,9 +19,10 @@ jobs:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
+      # Build dependencies
       - name: Build with Maven
         run: mvn -B package --file pom.xml
       # Tests
-      - name: Test PHPUnit
+      - name: Tests
         run: |
           mvn test
